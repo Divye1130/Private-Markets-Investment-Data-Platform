@@ -65,7 +65,7 @@ See `docs/architecture.md` for the design rationale.
 **Links:** Fund-Investor, Fund-Asset  
 **Satellites:** Fund attributes and versioned NAV history
 
-The point of the vault is historical traceability: an NAV restatement becomes another satellite record rather than replacing the earlier reported value.
+The vault's purpose is historical traceability: an NAV restatement becomes another satellite record rather than replacing the earlier reported value.
 
 ### Kimball Gold layer
 
@@ -78,7 +78,7 @@ Gold marts calculate DPI, RVPI, TVPI, unfunded commitments, sector/region exposu
 
 The generator creates 60 synthetic capital-call PDFs. The verified local parser uses `pypdf` to extract typed fields:
 
-- fund / investor IDs;
+- fund/investor IDs;
 - notice and due dates;
 - currency;
 - call amount;
@@ -98,27 +98,6 @@ A `DatabricksModelServingExtractor` seam plus a Databricks notebook show where a
 4. Data Vault 2.0 hubs/links/satellites;
 5. Kimball/semantic marts;
 6. optional model-serving seam for documents.
-
-Run `docs/databricks_runbook.md` before claiming live Databricks experience from this repository.
-
-## Dashboard
-
-After the pipeline runs:
-
-```bash
-python scripts/build_dashboard.py
-```
-
-Open `docs/index.html`. The dashboard is GitHub Pages-ready and includes:
-
-- TVPI by vintage;
-- sector and regional exposures;
-- position-to-NAV reconciliation;
-- capital-call document reconciliation;
-- quarantine volumes;
-- fund-level KPI table.
-
-![Dashboard preview](docs/dashboard_preview.png)
 
 ## Quick start
 
