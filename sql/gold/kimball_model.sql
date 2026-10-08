@@ -1,0 +1,9 @@
+-- Gold reporting model grain
+-- dim_fund: one row per fund
+-- dim_investor: one row per investor
+-- dim_asset: one row per asset
+-- dim_date: one row per observed business date
+-- fact_cashflow: one row per cashflow_id
+-- fact_commitment: one row per commitment_id
+-- fact_position: one row per position_id / as_of_date
+-- fact_nav: latest valid version per fund / as_of_date while Vault retains historical restatements

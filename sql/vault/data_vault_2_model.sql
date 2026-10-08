@@ -1,0 +1,3 @@
+-- Logical Data Vault 2.0 model: business keys in hubs, relationships in links,
+-- descriptive/history-bearing attributes in satellites.
+-- See Databricks notebook 03_data_vault.sql for executable Databricks SQL.

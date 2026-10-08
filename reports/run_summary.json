@@ -1,0 +1,75 @@
+{
+  "database": "warehouse/private_markets.db",
+  "bronze_rows": {
+    "funds": 24,
+    "investors": 180,
+    "assets": 240,
+    "fx_rates": 3,
+    "commitments": 793,
+    "cashflows": 4592,
+    "nav": 438,
+    "positions": 279,
+    "document_manifest": 60
+  },
+  "silver_rows": {
+    "funds": 24,
+    "investors": 180,
+    "assets": 240,
+    "fx_rates": 3,
+    "commitments": 787,
+    "cashflows": 4547,
+    "nav": 433,
+    "positions": 272
+  },
+  "quarantined_rows": 63,
+  "quarantine_by_entity": {
+    "cashflows": 45,
+    "commitments": 6,
+    "nav": 5,
+    "positions": 7
+  },
+  "vault": {
+    "fund_hubs": 24,
+    "investor_hubs": 180,
+    "asset_hubs": 240,
+    "fund_investor_links": 793,
+    "fund_asset_links": 272,
+    "nav_history_rows": 433,
+    "restatement_rows_preserved": 18
+  },
+  "gold": {
+    "funds": 24,
+    "investors": 180,
+    "assets": 240,
+    "cashflows": 4547,
+    "positions": 272,
+    "nav_snapshots_latest_version": 415
+  },
+  "documents": {
+    "documents_parsed": 60,
+    "schema_pass": 60,
+    "ledger_matches": 52,
+    "review_queue": 8
+  },
+  "reconciliation": {
+    "funds_pass": 18,
+    "funds_review": 6
+  },
+  "portfolio_metrics": {
+    "median_tvpi": 1.089,
+    "median_dpi": 0.62,
+    "median_irr": 0.064,
+    "total_nav_gbp": 4707141665.21,
+    "total_unfunded_gbp": 3391099183.41
+  },
+  "fx_normalisation": {
+    "as_of_date": "2026-09-30",
+    "rates_to_gbp": {
+      "GBP": 1.0,
+      "USD": 0.76,
+      "EUR": 0.87
+    },
+    "rate_source": "synthetic_demo"
+  },
+  "execution_note": "Verified local reference implementation using Python/pandas/SQLite. Databricks/PySpark assets are deployment-ready source code but were not executed in this environment."
+}

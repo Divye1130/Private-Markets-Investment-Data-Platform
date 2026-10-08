@@ -1,0 +1,7 @@
+entity,quarantine_reason,rows
+cashflows,duplicate_cashflow_id,24
+cashflows,invalid_currency,12
+cashflows,orphan_fund,9
+commitments,non_positive_commitment,6
+nav,negative_nav,5
+positions,orphan_asset,7
