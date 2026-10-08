@@ -4,7 +4,7 @@ A portfolio-grade data-engineering project modelling how fragmented private-mark
 
 **Core themes:** Python, SQL, private-markets data, Bronze/Silver/Gold architecture, Data Vault 2.0, Kimball modelling, data quality, reconciliation, document extraction, Databricks/PySpark deployment assets, CI and a GitHub Pages dashboard.
 
-## What the verified default run produces
+## Run output
 
 - **24 funds**, **180 investors** and **240 underlying assets**.
 - **793 raw commitments**, **4,592 raw cashflow rows**, **438 raw NAV records** and **279 raw positions**.
