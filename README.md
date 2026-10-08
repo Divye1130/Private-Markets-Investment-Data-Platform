@@ -1,3 +1,5 @@
+Link to live dashboard -- https://divye1130.github.io/Private-Markets-Investment-Data-Platform/
+
 # Private Markets Investment Data Lakehouse & Document Intelligence Platform
 
 A portfolio-grade data-engineering project modelling how fragmented private-markets data can be ingested, quality-controlled, historised, transformed into trusted investment marts, and reconciled against capital-call documents.
