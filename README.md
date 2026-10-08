@@ -4,8 +4,6 @@ A portfolio-grade data-engineering project modelling how fragmented private-mark
 
 **Core themes:** Python, SQL, private-markets data, Bronze/Silver/Gold architecture, Data Vault 2.0, Kimball modelling, data quality, reconciliation, document extraction, Databricks/PySpark deployment assets, CI and a GitHub Pages dashboard.
 
-> **Execution status:** The full reference pipeline was executed and tested locally with Python, pandas, and SQLite. Databricks/PySpark notebooks are included as deployment-ready source assets but were **not executed in a live Databricks workspace** in this build environment.
-> 
 ## What the verified default run produces
 
 - **24 funds**, **180 investors** and **240 underlying assets**.
