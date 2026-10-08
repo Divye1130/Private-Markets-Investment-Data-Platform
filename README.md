@@ -1,16 +1,16 @@
 # Private Markets Investment Data Lakehouse & Document Intelligence Platform
 
-A portfolio-grade data-engineering project modelling how fragmented private-markets data can be ingested, quality-controlled, historised, transformed into trusted investment marts and reconciled against capital-call documents.
+A portfolio-grade data-engineering project modelling how fragmented private-markets data can be ingested, quality-controlled, historised, transformed into trusted investment marts, and reconciled against capital-call documents.
 
 **Core themes:** Python, SQL, private-markets data, Bronze/Silver/Gold architecture, Data Vault 2.0, Kimball modelling, data quality, reconciliation, document extraction, Databricks/PySpark deployment assets, CI and a GitHub Pages dashboard.
 
-> **Execution status:** the full reference pipeline was executed and tested locally with Python, pandas and SQLite. Databricks/PySpark notebooks are included as deployment-ready source assets but were **not executed in a live Databricks workspace** in this build environment. The repository keeps those claims separate on purpose.
+> **Execution status:** The full reference pipeline was executed and tested locally with Python, pandas, and SQLite. Databricks/PySpark notebooks are included as deployment-ready source assets but were **not executed in a live Databricks workspace** in this build environment. The repository keeps those claims separate on purpose.
 
 ## What the verified default run produces
 
 - **24 funds**, **180 investors** and **240 underlying assets**.
 - **793 raw commitments**, **4,592 raw cashflow rows**, **438 raw NAV records** and **279 raw positions**.
-- **63 deliberately invalid rows quarantined**, including duplicates, invalid currencies, orphan keys and invalid values.
+- **63 deliberately invalid rows quarantined**, including duplicates, invalid currencies, orphan keys, and invalid values.
 - **18 NAV restatements retained** in the Data Vault historical satellite rather than overwritten.
 - **4,547 valid cashflows** and **272 valid positions** in the Gold analytical model.
 - **60 synthetic capital-call PDFs parsed**, with all 60 passing the typed extraction schema.
@@ -153,9 +153,6 @@ warehouse/            generated SQLite reference warehouse
 .github/workflows/    CI and Pages deployment
 ```
 
-## Why this is useful as a portfolio project
-
-The project is intentionally more than a notebook or dashboard. It demonstrates a full data-product lifecycle: source modelling, ingestion, explicit quality gates, historical corrections, formal warehouse modelling, reconciliation, analytical semantics, testing, deployment assets and business-facing presentation.
 
 ## Limitations
 
@@ -164,8 +161,4 @@ The project is intentionally more than a notebook or dashboard. It demonstrates 
 - The local reference implementation uses pandas/SQLite rather than a distributed engine.
 - Databricks, Delta and model-serving assets were not live-executed in this environment.
 - The Data Vault implementation is intentionally compact and educational; a production vault would usually include effectivity/record-source conventions, more satellites and incremental loading strategy.
-- Fund-level XIRR is calculated from each fund's generated base-currency cashflows plus terminal NAV. It is a synthetic engineering demonstration rather than audited investment performance.
-
-## CV-safe wording
-
-> Built and verified a private-markets data platform over 4.5k+ cashflows using Python/SQL, with Bronze/Silver quality gates, Data Vault 2.0 history, Kimball marts, reconciliation controls and a GitHub Pages dashboard; quarantined 63 deliberate data-quality failures and routed 8/60 synthetic capital-call document mismatches to review. Added Databricks/PySpark deployment notebooks without claiming unexecuted cloud deployment.
+- Fund-level XIRR is calculated from each fund's generated base-currency cashflows plus terminal NAV. It is a synthetic engineering demonstrationonly.  
